@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bullcat — Strong. Patient. Strategic.</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            bull: '#0ea5a4',
+            accent: '#f97316',
+            muted: '#9CA3AF'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .pie {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.12);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- NAV -->
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="imgs/logo.jpeg" alt="Bullcat logo" class="w-10 h-10 object-contain rounded-full"/>
+        <div>
+          <h1 class="text-lg font-extrabold tracking-tight">Bullcat</h1>
+          <p class="text-xs text-muted">Strong. Patient. Strategic.</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#story" class="hover:text-bull">Story</a>
+        <a href="#vision" class="hover:text-bull">Vision</a>
+        <a href="#tokenomics" class="hover:text-bull">Tokenomics</a>
+        <a href="#community" class="hover:text-bull">Community</a>
+        <a href="https://dexscreener.com/solana/4ufqauqnsaasqx39rpee5pmfqsftsz13twa1wacrmj4y" target="_blank" class="px-3 py-2 bg-bull text-white rounded-md text-sm">View on Dexscreener</a>
+        <button id="connectBtn" class="px-3 py-2 border rounded-md text-sm">Connect Wallet</button>
+      </nav>
+
+      <div class="md:hidden flex items-center gap-2">
+        <button id="mobileNavBtn" aria-expanded="false" class="p-2 rounded-md border">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t bg-white/95">
+      <div class="px-5 py-4 flex flex-col gap-3">
+        <a href="#story" class="py-2">Story</a>
+        <a href="#vision" class="py-2">Vision</a>
+        <a href="#tokenomics" class="py-2">Tokenomics</a>
+        <a href="#community" class="py-2">Community</a>
+        <a href="https://dexscreener.com/solana/4ufqauqnsaasqx39rpee5pmfqsftsz13twa1wacrmj4y" target="_blank" class="py-2 text-bull font-semibold">View on Dexscreener</a>
+        <button id="mobileConnect" class="py-2 border rounded">Connect Wallet</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-5 py-12">
+        <div class="space-y-6">
+          <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight">Bullcat — move with purpose.</h2>
+          <p class="text-lg text-slate-600 max-w-xl">
+            Bullcat isn’t just another meme token. It’s a symbol of strength (Bull) and sharp instinct (Cat). A perfect mix of power and strategy.
+            In a market full of noise, Bullcat moves with purpose. This isn’t about chasing hype — it’s about energy, community, and timing.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="https://dexscreener.com/solana/4ufqauqnsaasqx39rpee5pmfqsftsz13twa1wacrmj4y" target="_blank" class="px-5 py-3 bg-bull text-white rounded-lg font-semibold shadow">Buy on Dexscreener</a>
+            <button id="heroConnect" class="px-5 py-3 border rounded-lg">Connect Wallet</button>
+            <a href="#tokenomics" class="px-5 py-3 text-sm text-muted">See tokenomics</a>
+          </div>
+
+          <div class="flex flex-wrap gap-3 items-center text-sm mt-3 text-slate-600">
+            <div class="flex items-center gap-2">
+              <img src="imgs/WhatsApp Image 2026-02-12 at 10.35.45 PM.jpeg" alt="telegram" class="w-6 h-6 rounded"/>
+              <a href="https://t.me/BULLCATSOL" target="_blank" class="underline">Telegram</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <img src="imgs/WhatsApp Image 2026-02-12 at 10.35.46 PM.jpeg" alt="x" class="w-6 h-6 rounded"/>
+              <a href="https://x.com/bullcatsol369?s=21" target="_blank" class="underline">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <div class="max-w-md w-full rounded-2xl overflow-hidden shadow-2xl">
+            <img src="imgs/WhatsApp Image 2026-02-12 at 10.35.48 PM.jpeg" alt="Bullcat hero" class="w-full h-80 object-cover">
+            <div class="p-5 bg-gradient-to-t from-black/60 to-transparent text-white">
+              <h3 class="font-bold text-xl">Bullcat — Strong. Patient. Strategic.</h3>
+              <p class="text-sm opacity-80 mt-1">We move as one. We defend the floor. We build value over time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY & VISION -->
+    <section id="story" class="max-w-7xl mx-auto px-5 py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-extrabold">The Story</h3>
+          <p class="text-slate-600 leading-relaxed">
+            Bullcat isn’t just another meme token. It’s a symbol of strength (Bull) and sharp instinct (Cat).
+            A perfect mix of power and strategy. In a market full of noise, Bullcat moves with purpose.
+            This isn’t about chasing hype. It’s about energy, community, and timing.
+          </p>
+
+          <h4 class="font-semibold">The Identity</h4>
+          <p class="text-slate-600">Bullcat holders are steady. They don’t panic. They don’t chase every trend. They build, hold, and grow together.</p>
+
+          <h4 class="font-semibold mt-4">The Mission</h4>
+          <ul class="list-disc ml-5 text-slate-600">
+            <li>We move as one.</li>
+            <li>We defend the floor.</li>
+            <li>We tell the story every day.</li>
+            <li>We show up and make an impact.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-2xl font-extrabold">The Vision</h3>
+          <ul class="space-y-3 text-slate-600">
+            <li class="flex gap-3 items-start">
+              <span class="w-9 h-9 bg-bull text-white rounded-full grid place-items-center font-semibold">1</span>
+              <div>
+                <div class="font-semibold">Build a loyal, active community</div>
+                <div class="text-sm">Real people, real momentum.</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="w-9 h-9 bg-accent text-white rounded-full grid place-items-center font-semibold">2</span>
+              <div>
+                <div class="font-semibold">Create organic momentum</div>
+                <div class="text-sm">No fake noise — steady growth.</div>
+              </div>
+            </li>
+            <li class="flex gap-3 items-start">
+              <span class="w-9 h-9 bg-slate-700 text-white rounded-full grid place-items-center font-semibold">3</span>
+              <div>
+                <div class="font-semibold">Reward commitment</div>
+                <div class="text-sm">Holders come first.</div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="mt-4">
+            <img src="imgs/com.jpeg" alt="community" class="rounded-lg w-full object-cover shadow-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="bg-white/70 border-t">
+      <div class="max-w-7xl mx-auto px-5 py-12 grid gap-8 md:grid-cols-2 items-center">
+        <div>
+          <h3 class="text-2xl font-extrabold">Tokenomics</h3>
+          <p class="text-slate-600 mt-2">Transparent, minimal fees that fuel development and growth while most of the supply is locked.</p>
+
+          <div class="mt-6 grid gap-3">
+            <div class="flex items-center justify-between bg-slate-50 p-4 rounded">
+              <div>
+                <div class="text-sm font-semibold">Dev</div>
+                <div class="text-xs text-muted">Operational & maintenance</div>
+              </div>
+              <div class="font-mono">1.00%</div>
+            </div>
+
+            <div class="flex items-center justify-between bg-slate-50 p-4 rounded">
+              <div>
+                <div class="text-sm font-semibold">Marketing</div>
+                <div class="text-xs text-muted">Growth & partnerships</div>
+              </div>
+              <div class="font-mono">0.98%</div>
+            </div>
+
+            <div class="flex items-center justify-between bg-slate-50 p-4 rounded">
+              <div>
+                <div class="text-sm font-semibold">Team Wallet</div>
+                <div class="text-xs text-muted">Core contributors</div>
+              </div>
+              <div class="font-mono">0.98%</div>
+            </div>
+
+            <div class="flex items-center justify-between bg-slate-50 p-4 rounded">
+              <div>
+                <div class="text-sm font-semibold">Locked on Meteora</div>
+                <div class="text-xs text-muted">Secure liquidity & community trust</div>
+              </div>
+              <div class="font-mono">97.04%</div>
+            </div>
+          </div>
+
+          <p class="text-xs text-muted mt-4">Contract allocations: 1% to dev, 0.98% to marketing, 0.98% to team; remaining 97.04% locked on Meteora.</p>
+        </div>
+
+        <div class="flex flex-col items-center gap-6">
+          <div class="pie" id="pieChart" title="Tokenomics pie"></div>
+          <div class="flex gap-4 flex-wrap justify-center">
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full" style="background:#0ea5a4"></span><span class="text-sm">Locked (97.04%)</span></div>
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full" style="background:#f97316"></span><span class="text-sm">Dev (1%)</span></div>
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full" style="background:#6366f1"></span><span class="text-sm">Marketing (0.98%)</span></div>
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full" style="background:#ef4444"></span><span class="text-sm">Team (0.98%)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY / CTA -->
+    <section id="community" class="max-w-7xl mx-auto px-5 py-12">
+      <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="text-2xl font-extrabold">Join the Pride</h4>
+          <p class="text-slate-300 mt-2">Community-first. Patient. Strategic. Follow updates and help shape the story.</p>
+        </div>
+
+        <div class="flex gap-3">
+          <a href="https://t.me/BULLCATSOL" target="_blank" class="px-4 py-3 bg-white/10 rounded-md">Telegram</a>
+          <a href="https://x.com/bullcatsol369?s=21" target="_blank" class="px-4 py-3 bg-white/10 rounded-md">X</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t">
+      <div class="max-w-7xl mx-auto px-5 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+        <div class="flex items-center gap-3">
+          <img src="imgs/logo.jpeg" alt="logo" class="w-8 h-8 rounded-full"/>
+          <div>
+            <div class="font-semibold">Bullcat</div>
+            <div class="text-xs">Strong. Patient. Strategic.</div>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <a href="https://dexscreener.com/solana/4ufqauqnsaasqx39rpee5pmfqsftsz13twa1wacrmj4y" target="_blank" class="hover:underline">Dexscreener</a>
+          <a href="https://t.me/BULLCATSOL" target="_blank" class="hover:underline">Telegram</a>
+          <a href="https://x.com/bullcatsol369?s=21" target="_blank" class="hover:underline">X</a>
+        </div>
+
+        <div class="text-xs text-muted">© Bullcat • Built for the community</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- JS interactions + pie rendering -->
+  <script>
+    // mobile nav toggle
+    const mobileBtn = document.getElementById('mobileNavBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Connect wallet button placeholder
+    function fakeConnect(elem) {
+      if (!elem) return;
+      elem.disabled = true;
+      const old = elem.innerText;
+      elem.innerText = 'Connecting...';
+      setTimeout(() => {
+        elem.innerText = 'Wallet Connected';
+        elem.classList.add('bg-green-600','text-white');
+      }, 900);
+    }
+    document.getElementById('connectBtn')?.addEventListener('click', (e) => fakeConnect(e.currentTarget));
+    document.getElementById('mobileConnect')?.addEventListener('click', (e) => fakeConnect(e.currentTarget));
+    document.getElementById('heroConnect')?.addEventListener('click', (e) => fakeConnect(e.currentTarget));
+
+    // Tokenomics pie (conic-gradient)
+    (function renderPie() {
+      const pie = document.getElementById('pieChart');
+      if (!pie) return;
+      const dev = 1.00;
+      const marketing = 0.98;
+      const team = 0.98;
+      const locked = +(100 - (dev + marketing + team)).toFixed(2); // 97.04
+      const slices = [
+        { pct: locked, color: '#0ea5a4' },
+        { pct: dev, color: '#f97316' },
+        { pct: marketing, color: '#6366f1' },
+        { pct: team, color: '#ef4444' }
+      ];
+      let offset = 0;
+      const segments = slices.map(s => {
+        const start = offset;
+        const end = +(offset + s.pct).toFixed(2);
+        offset = end;
+        return `${s.color} ${start}% ${end}%`;
+      }).join(', ');
+      pie.style.background = `conic-gradient(${segments})`;
+      pie.innerHTML = '<div class="text-center"><div class="text-lg font-semibold">Total Supply</div><div class="text-xs text-muted">97.04% locked</div></div>';
+    })();
+  </script>
